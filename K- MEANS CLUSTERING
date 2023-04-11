@@ -1,0 +1,21 @@
+import numpy as np
+from sklearn.cluster import KMeans
+
+# Generate example data
+X = np.random.rand(100, 2)  # Generate 100 data points with 2 features each
+
+# Initialize K-means clustering algorithm
+kmeans = KMeans(n_clusters=3)  # Specify the number of clusters
+
+# Fit the algorithm to the data
+kmeans.fit(X)
+
+# Get the cluster labels for each data point
+labels = kmeans.labels_
+
+# Get the cluster centers
+centers = kmeans.cluster_centers_
+
+# Print the results
+print("Cluster labels:\n", labels)
+print("Cluster centers:\n", centers)
